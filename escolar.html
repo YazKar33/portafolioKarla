@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos Humanos - Proyecto</title>
+    <link rel="stylesheet" href="assets/css/esc.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Sistema escolar para docentes</h1>
+            <p>El Sistema Escolar para Docentes está diseñado para simplificar la gestión académica. Permite a los profesores registrar asistencia de los estudiantes de manera eficiente y asignar rúbricas de evaluación personalizadas. Además, el sistema facilita el cálculo automático de calificaciones, brindando una solución integral para la evaluación y seguimiento del rendimiento académico.</p>
+        </div>
+    </header>
+
+    <section id="gallery">
+        <div class="container">
+            <h2>Capturas del Proyecto</h2>
+            <div class="gallery-grid">
+                <div class="image-container">
+                    <img src="assets/img/sis1.png" alt="Captura 1" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/sis2.png" alt="Captura 2" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/sis3.png" alt="Captura 3" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/sis4.png" alt="Captura 4" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/sis5.png" alt="Captura 5" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/sis6.png" alt="Captura 6" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/sis7.png" alt="Captura 7" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/sis8.png" alt="Captura 8" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/sis9.png" alt="Captura 9" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/sis10.jpeg" alt="Captura 10" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/sis11.png" alt="Captura 10" class="modal-trigger">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ing. Karla Jazmín Zuñiga Moreno Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Obtener el modal y las imágenes
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("modalImg");
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        // Obtener todas las imágenes
+        var images = document.querySelectorAll(".modal-trigger");
+
+        // Añadir evento a cada imagen
+        images.forEach(function(image) {
+            image.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            };
+        });
+
+        // Cerrar el modal al hacer clic en la "X"
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        // Cerrar el modal si se hace clic fuera de la imagen
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>

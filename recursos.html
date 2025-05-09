@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos Humanos - Proyecto</title>
+    <link rel="stylesheet" href="assets/css/rec.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Recursos Humanos</h1>
+            <p>El módulo de Recursos Humanos es una solución integral diseñada para optimizar la gestión del personal dentro de una organización. Este sistema permite llevar un control eficiente de los empleados, registrar incidencias, gestionar asistencias y generar reportes detallados. Además, incorpora tecnología biométrica para mejorar la seguridad y precisión en los registros.</p>
+    
+            
+        </div>
+    </header>
+
+    <section id="gallery">
+        <div class="container">
+            <h2>Capturas del Proyecto</h2>
+            <div class="gallery-grid">
+                <div class="image-container">
+                    <img src="assets/img/rh1.png" alt="Captura 1" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/rh2.png" alt="Captura 2" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/rh3.png" alt="Captura 3" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/rh4.png" alt="Captura 4" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/rh5.png" alt="Captura 5" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/rh6.png" alt="Captura 6" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/rh7.png" alt="Captura 7" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/rh8.png" alt="Captura 8" class="modal-trigger">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="manual">
+        <div class="container">
+            <h2>Manual del Usuario</h2>
+            <iframe src="assets/documentos/manual_usuario.pdf" width="100%" height="500px" style="border: none;">
+                Este navegador no soporta la visualización de PDF. Puedes <a href="assets/manual_usuario.pdf">descargarlo aquí</a>.
+            </iframe>
+        </div>
+    </section>
+    
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Karla Jazmín. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("modalImg");
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        var images = document.querySelectorAll(".modal-trigger");
+
+        // Añadir evento a cada imagen
+        images.forEach(function(image) {
+            image.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            };
+        });
+
+        // Cerrar el modal al hacer clic en la "X"
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        // Cerrar el modal si se hace clic fuera de la imagen
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>

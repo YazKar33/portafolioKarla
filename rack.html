@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes</title>
+    <link rel="stylesheet" href="assets/css/rack.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Rack de Comunicaciones</h1>
+            <p>Encargada del armado e instalación de un rack de comunicaciones, incluyendo la integración de un panel de parcheo, organizador de cables y un switch Linksys. Se verificó el correcto funcionamiento conectando un equipo de cómputo, con una configuración en cascada para ampliar la red mediante un switch secundario enlazado al principal.</p>
+        </div>
+    </header>
+
+    <section id="gallery">
+        <div class="container">
+            <h2>Capturas del Proyecto</h2>
+            <div class="gallery-grid">
+                <div class="image-container">
+                    <img src="assets/img/r1.jpg" alt="Captura 2" class="modal-trigger">
+                </div>
+                
+                
+                <div class="image-container">
+                    <img src="assets/img/r2.jpg" alt="Captura 2" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/r3.jpg" alt="Captura 3" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/r4.jpg" alt="Captura 4" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/r5.jpg" alt="Captura 5" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/r6.jpg" alt="Captura 6" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/r7.jpg" alt="Captura 7" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/r8.jpg" alt="Captura 8" class="modal-trigger">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Karla Jazmín. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("modalImg");
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        var images = document.querySelectorAll(".modal-trigger");
+
+        // Añadir evento a cada imagen
+        images.forEach(function(image) {
+            image.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            };
+        });
+
+        // Cerrar el modal al hacer clic en la "X"
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        // Cerrar el modal si se hace clic fuera de la imagen
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>

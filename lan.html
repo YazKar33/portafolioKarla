@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes</title>
+    <link rel="stylesheet" href="assets/css/rack.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Instalación y Optimización de Red LAN</h1>
+            <p>Realicé la instalación y puesta en marcha de una red de área local (LAN), desde la planificación del cableado estructurado hasta la configuración de los dispositivos de red. Se llevó a cabo el tendido de cables, ponchado y verificación de conectividad con herramientas de prueba. Posteriormente, se configuraron direcciones IP, se habilitó la comunicación entre equipos y se resolvieron incidencias comunes en redes locales. Esta experiencia fortaleció mis habilidades técnicas en instalación de redes, configuración de periféricos y mantenimiento preventivo, asegurando un entorno de red funcional y estable.</p>
+        </div>
+    </header>
+
+    <section id="gallery">
+        <div class="container">
+            <h2>Capturas del Proyecto</h2>
+            <div class="gallery-grid">
+                <div class="image-container">
+                    <img src="assets/img/lan1.jpg" alt="Captura 2" class="modal-trigger">
+                </div>
+                 <div class="image-container">
+                    <img src="assets/img/lan2.png" alt="Captura 2" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/lan3.jpg" alt="Captura 3" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/lan4.jpg" alt="Captura 4" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/lan5.jpg" alt="Captura 5" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/lan6.png" alt="Captura 6" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/lan7.png" alt="Captura 7" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/lan8.png" alt="Captura 8" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/lan9.jpg" alt="Captura 8" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/lan10.jpg" alt="Captura 8" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/lan11.png" alt="Captura 8" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/lan12.png" alt="Captura 8" class="modal-trigger">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/lan13.jpeg" alt="Captura 8" class="modal-trigger">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Karla Jazmín. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("modalImg");
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        var images = document.querySelectorAll(".modal-trigger");
+
+        // Añadir evento a cada imagen
+        images.forEach(function(image) {
+            image.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            };
+        });
+
+        // Cerrar el modal al hacer clic en la "X"
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        // Cerrar el modal si se hace clic fuera de la imagen
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>
